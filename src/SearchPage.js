@@ -68,8 +68,10 @@ const SearchPage = () => {
           />
         </label>
       </div>
+
       <button onClick={handleSearch}>Search</button>
-      <div class="container">
+
+      {/*<div class="container">
         {chunkArray(results, 3).map((row, rowIndex) => (
           <div className="row " key={rowIndex}>
             {row.map((item, index) => (
@@ -78,36 +80,36 @@ const SearchPage = () => {
                   key={item.data[0]?.nasa_id}
                   to={`/details/${item.data[0]?.nasa_id}`}
                 >
-                  {/* actual image */}
+                  {/* actual image /}
                   {item.links && item.links[0] && item.links[0].href && (
                     <img src={item.links[0].href} alt={item.data[0]?.title} />
                   )}
 
-                  {/* image description text */}
+                  {/* image description text /}
                   {item.data[0]?.description && <p>{item.data[0].title}</p>}
                 </Link>
               </div>
             ))}
           </div>
         ))}{" "}
-      </div>
+      </div>*/}
 
-      {/*<div className="grid">
+      <div className="grid">
         {results.map((item) => (
           <Link
             key={item.data[0]?.nasa_id}
             to={`/details/${item.data[0]?.nasa_id}`}
           >
-            {/* actual image /}
+            {/* actual image */}
             {item.links && item.links[0] && item.links[0].href && (
               <img src={item.links[0].href} alt={item.data[0]?.title} />
             )}
 
-            {/* image description text /}
-            {item.data[0]?.description && <p>{item.data[0].title }</p>}
+            {/* image description text */}
+            {item.data[0]?.description && <p>{item.data[0].title}</p>}
           </Link>
         ))}
-      </div>*/}
+      </div>
     </div>
   );
 };
